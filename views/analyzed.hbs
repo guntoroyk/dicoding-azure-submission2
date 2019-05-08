@@ -1,0 +1,28 @@
+<html>
+    <h1>Image Prediction Result</h1>
+    <h2>Categories</h2>
+    <ul>
+      {{#each data.categories}}
+        <li>{{name}}</li>
+      {{/each}}
+    </ul>
+
+    <h2>Description</h2>
+    <div>
+      <p>Related stuff</p>
+      <ul>
+        {{#each data.description.tags}}
+          <li>{{this}}</li>
+        {{/each}}
+      </ul>
+    </div>
+    <div>
+      <h4>Captions</h4>
+      {{#each data.description.captions}}
+        <p>{{text}}</p>
+      {{/each}}
+    </div>
+
+    <h4>Meta Information</h4>
+    <p>Width:{{data.metadata.width}}, Height:{{data.metadata.height}}, Format:{{data.metadata.format}}</p>
+</html>
